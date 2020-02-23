@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>CSS in a day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css"
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Kosugi|Roboto|Sigmar+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Learn CSS in a day</h1>
+  <div class="intro">
+    <p>This is everything I learnt about CSS. Enjoy!</p>
+  <p> CSS stands for Cascading Style Sheets. It is a styling language and it is called "cascading" because CSS styles can overlap one another.</p>
+    <h3>Types of Style Sheets</h3>
+    <pre>
+  in &lt;head&gt; of html add &lt;link rel="stylesheet" href="path_of_styles.css"&gt;
+  in styles.css file:
+  selector{
+  property:value //style definiton while using external CSS
+  }</pre>
+  <pre>
+  &lt;style&gt; css code here &lt;/style&gt; //when using internal CSS</pre>
+  <pre>
+  &lt;tag style= "property:value;"&gt; //when using inline CSS</pre>
+  </div>
+  <hr>
+  <div class="topic">
+      <h3>Colors</h3>
+      <p>Types of colors:</p>
+      <ol>
+      <li>named colors: limited and are written directly, no shades,
+      <div class="black">background-color:black;</div></li>
+      <li>RGB: composition of red green blue, can generate 16 million colors. syntax: rgb(red,green,blue). Eg:rgb(0,0,0)=black, rgb(255,255,0)=yellow,
+        <div class="pink">background-color:rgb(255,102,102);</div>
+        </li>
+      <li>hexadecimal values: should be 6 char long with prefix # Eg: #ffffff=white, #ff0000=red,
+        <div class="blue">background-color:#79bac1;</div>
+        </li>
+    </ol>
+  </div>
+  <div class="topic">
+    <h3>Font Styles</h3>
+    <ul>
+      <li><span class="font-fam1">font-family</span>  :<span class="font-fam2">the font type</span>, best to have more than one</li>
+      <li><span class="fontsize">font-size</span>: can be given in px or small, x-small, xx-small, large, etc</li>
+      <li><span class="fontweight">font-weight </span>:for bolding, can be bold/bolder/lighter/normal/px, default value=normal</li>
+      <li><span class="fontstyle">font-style </span> :for italicizing or making it oblique, font-style:italic/normal/oblique </li>
+      <li><span class="fontstretch">font-stretch </span> : to make the text narrower or wider, can be normal, expanded, condensed, semi/extra/ultra expanded</li>
+      <li><span class="fontcolor">color</span> : to change the font color of any text. </li>
+      <li>font:a shorthand property as<pre class="font">font: style  variant(like small-caps)  weight  size/line-height  family;</pre></li>
+    </ul>
+  </div>
+  <div class="topic">
+      <h3>Text Styles</h3>
+      <ul>
+      <li><span class="letterspace">letter-spacing: px; </span></li>
+      <li><span class="wordspace">word-spacing: px; used for introducing space between words.</span></li>
+      <li><span class="lineht">line-height:px; for height between lines.</span></li>
+      <li><span class="txtdecor">text-decoration: underline/overline/linethrough; </span></li>
+        <ul>
+          <li><span class="txtdecor1">text-decoration-color</span></li>
+          <li>text-decoration which can be solid/wavy/dotted/dashed/double <pre class="txtdecor2">text-decoration-style: double </pre></li>
+        </ul>
+      <li>text-align can be left/right/center/justify<pre class="txtalign">text-align:center;
+//default value:left</pre></li>
+      <li>text-indent: specifies left margin for first line in paragraph. This is rarely used.</li>
+      <li><span class="txtshadow">text-shadow: h-shadow(px) v-shadow(px) blurradius(px) color;</span></li>
+    </ul>
+  </div>
+  <div class="topic">
+    <h3>span</h3>
+    <p>This is used for applying some formatting or styling to a small amount/part of text. It is a paired tag. For example, underlining this <span class="word">word</span> and coloring it in the whole sentence by making use of span.</p>
+    <pre>
+  &lt;span class="classname"&gt; Content here &lt;/span&gt;
+  .classname{ property: value;}
+    </pre>
+  </div>
+  <div class="topic">
+    <h3>Background images</h3>
+      <pre>Eg:background-image:url("sample.png")</pre>
+      <pre>background-attachment: scroll(image will be scrolled with the text)/ fixed(image will be fixed i.e. it will appear constantly)</pre>
+    </div>
+    <div class="topic">
+    <h3>Lists</h3>
+    <ul>
+      <li>list-style-type:
+        <ul>
+          <li>for &lt;ul&gt;
+            <pre>list-style-type: none/disk/square/circle;</pre>
+            <ul class="ulstyle">
+              <li>Guten Morgen</li>
+              <li>Hello</li>
+              <li>Namasthe</li>
+              <li>Hola</li>
+            </ul>
+            </li>
+          <li>for &lt;ol&gt;
+            <pre>list-style-type: none/decimal/decimal-leading-zero/lower-alpha/upper-alpha/lower-roman/upper-roman/lower-greek;</pre>
+          <ol class="olstyle">
+            <li>Guten Morgen</li>
+            <li>Hello</li>
+            <li>Namasthe</li>
+            <li>Hola</li>
+          </ol>
+        </li>
+        </ul>
+      </li>
+      <li>
+        for having an image as a bullet. <pre>list-style-image: url("filename.extension");</pre>
+      </li>
+    </ul>
+  </div>
+  <div class="topic">
+    <h3>div</h3>
+    <p>It is a container where you can place any other elements and divide certain group of elements from the rest. Any number of divs can be present in a single page. We can have nested divs too. It is a paired tag. It is a block level element i.e. it occupies 100% width and the next elements will be in the next line.</p>
+    <pre> &lt;div&gt; content &lt;/div&gt; </pre>
+    <p>For example, this is a div having a radius and containing a heading and a paragraph.</p>
+    <div class="divcontainer">
+      <h2>Heading</h2>
+      <p>This is a paragraph</p>
+    </div>
+    <h4>width and height</h4>
+    <pre> width: numpx/ num%; </pre>
+    <pre> height: numpx/ num%; </pre>
+    <p>For example, this is a div having width as 200px and height as 100px</p>
+    <div class="rect"></div>
+    <h4>float</h4>
+    <p>It displays elements side by side. It can be used for placing one div beside another div or wrap some text around an image to the left or right.</p>
+    <pre>
+  float:left //displays elements from left towards right
+  float:left //displays elements from right towards left</pre>
+    <div class="circle"></div>
+    <div class="text">This text is going to be on the left of circle due to float:right.</div>
+    <h4 class="clear">clear</h4> <p>Now this heading is on the next line due to clear:right</p>
+    <p>It cancels the effect of float and pushes the current element to the next line.</p>
+    <pre>
+  clear: left // to cancel float:left
+  clear: right // to cancel float:right</pre>
+</div>
+    <div class="topic">
+    <h3>The Box Model</h3>
+      <div class="rectangle1">Margin<div class="rectangle2"> Border<div class="rectangle3"> Padding<div class="rectangle4">Content</div></div> </div></div>
+      <ul>
+        <li>Content - The content of the box, where text and images appear</li>
+        <li>Padding - The gap between border and content. It is transparent</li>
+        <li>Border - A border that goes around the padding and content</li>
+        <li>Margin - The gap between element to element. It is transparent</li>
+      </ul>
+      <h4>border</h4>
+      <ul>
+        <li><pre>border-style:none/solid/dotted/dashed/double/inset/outset/ridge/groove;</pre> We can also have <pre>border-top/left/bottom/right-style: value</pre>for specifying a style for the mentioned side.</li>
+        <li><pre>border-width: px; //for the thickness of the border</pre></li>
+        <li><pre>border-color: color/hex-code //for the color of the border</pre></li>
+        <li><pre>border: borderwidth borderstyle bordercolor; //shorthand style</pre></li>
+      </ul>
+      <div class="rect1">This is a div having a border-color, border-style: dotted and border-width: thick</div>
+      <h4>Margin</h4>
+      <p>It is used for margin i.e. gap between element to element, surrounding the element.</p>
+      <ul>
+      <li><pre>margin: numpx; // for all four sides</pre></li>
+      <li><pre>margin: n1px n2px; // for top,bottom and left,right</pre></li>
+      <li><pre>margin: n1px n2px n3px; // for top and left,right and bottom</pre></li>
+        <li><pre>margin: n1px n2px n3px n4px; // for top and right and bottom and left</pre></li></ul>
+      <p>We can also use margin-top/right/bottom/left individually.</p>
+      <div class="margin"> This div has margin-left:  20%;</div>
+      <h4>Padding</h4>
+      <p>specifies the gap between border and content. Inner margin is the padding and the outer margin is the margin.
+      <pre>padding: numpx;</pre>
+      <pre>padding: toppad rightpad bottompad leftpad;</pre>
+      <p>We can also use padding-top/right/bottom/left</p>
+      <div class="padding"> This div has a padding: 3%</div>
+      </div>
+      <div class="topic">
+    <h2>Advanced CSS Properties</h2>
+    <ol>
+      <li>opacity:
+        <pre>
+        opacity: 0 to 1;
+        1=fully visible
+        0.9,..,0.1= transparent
+        0= fully transparent/invisible
+        </pre>
+        <p class="transparent">I am going to make this sentence a little transparent by using opacity: 0.5;</p>
+      </li>
+      <li>
+        <pre>
+        display: block/inline/none;
+        display:block for making block level elements.
+        display:inline for making inline level elements.
+        display:none for hiding the element and its space is reclaimed by other elements automatically.
+        </pre>
+        <p class="pinline1">I am making this p inline</p>
+        <p class="pinline2">I made this p inline too so it is going to be on the same line.</p>
+        <p>Block level elements start from a new line and take entire width.</p>
+      </li>
+      <li>
+        visibility:visible(for showing an element)/hidden(for hiding an element)
+        <p>I am going to hide this word <span class="hide">'hide'</span> by using visibility: hidden;</p>
+      </li>
+      <li>
+        overflow: visible(shows additional content outside the element)/hidden(hides the additional element)/auto(shows scrollbars automatically if necessary);
+      </li>
+    </ol>
+  </div>
+    <div class="topic">
+<h4>CSS Selectors:</h4>
+      <table>
+      <tbody>
+      <tr>
+      <td>Tag selector</td>
+      <td><pre> tag{ property: value; }</pre></td>
+      </tr>
+      <tr>
+      <td>ID selector (must be distinct)</td>
+      <td><pre> #idname{ property:value; }</pre></td>
+      </tr>
+      <tr>
+      <td>Class selector (for a group of elements)</td>
+      <td><pre> .classname{ property:value; }</pre></td>
+      </tr>
+      <tr>
+      <td>Compound selector (for a specified tag having a specific class)</td>
+      <td><pre> tag.class{ property:value; } </pre></td>
+      </tr>
+      <tr>
+      <td>Grouping selector (selects the specified group of tags)</td>
+      <td><pre> tag1,tag2,tag3{ property:value; }</pre></td>
+      </tr>
+      <tr>
+      <td>Child selector (selects all the child tags of specified parent tag, can be grandchildren too)</td>
+      <td><pre> parenttag childtag{ property:value; }</pre></td>
+      </tr>
+      <tr>
+      <td>Attribute selector (selects tags having specified attribute)</td>
+      <td><pre> tag[property1:value1]{ property2:value2; }</pre></td>
+      </tr>
+      <tr>
+      <td>Hover selector (applies style only when the mouse pointer is placed over the element)</td>
+      <td><pre> tag:hover{ property:value; }</pre></td>
+      </tr>
+      <tr>
+      <td>Focus selector (style applied only when the focus i.e. cursor is inside an element like a textbox)</td>
+      <td><pre> tag:focus{ property:value; }</pre></td>
+      </tr>
+      <tr>
+      <td>Universal selector (selects all the tags in the web page including html, head, body, etc)</td>
+      <td><pre> *{ property:value; }</pre></td>
+      </tr>
+      </tbody>
+      </table>
+    </div>
+  <div class="topic">
+    <h3>CSS Style Precedance</h3>
+    <p>Higher priority overrides the same property's value of the lower priority</p>
+    <ol>
+      <li>ID Selector</li><li>Attribute Selector</li><li>Class Selector</li><li>Child Selector</li><li>Direct Child Selector</li><li>Tag Selector</li><li>Browser default style</li>
+    </ol>
+  </div>
+  <div class="topic">
+    <h3>Styles for Hyperlinks</h3>
+    <pre>
+    a:link: applies styles to unvisited hyperlinks
+    a:hover: applies styles to hyperlinks when we place the cursor on them
+    a:active: when we click a hyperlink and hold it
+    </pre>
+    <a href="https:/www.google.com" class="google" target="_blank"><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span>l<span class="r">e</span></a>
+  </div>
+  <div class="topic">
+    <h3>Border Radius</h3>
+    <p>It is used for applying rounded corners for any html element</p>
+    <pre>
+    border-radius: px;
+    border-radius: topleft topright bottomright bottomleft;
+    </pre>
+    <p>Eg: This div has a border-radius 40% </p>
+    <div class="roundedcorners"> </div>
+  </div>
+  <div class="topic">
+    <h3>Shadow</h3>
+    <p>It is used for applying shadow to an element.</p>
+    <ol>
+      <li>box-shadow:
+        <pre>
+        box-shadow: horizontalpos verticalpos blurradius shadowcolor;
+        Eg: box-shadow: 2px 2px 5px red;
+        </pre>
+        <div class="boxshadow">box-shadow: 2px 2px 5px red</div>
+      </li>
+      <li>text-shadow:
+        <pre>
+        text-shadow: horizontalpos verticalpos blurradius shadowcolor;
+        Eg: text-shadow: 2px 2px 5px red;
+        </pre>
+        <div class="textshadow">text-shadow: 2px 2px 5px red</div>
+      </li>
+    </ol>
+  </div>
+  <div class="topic">
+  <h3>Transitions</h3>
+  <p>It is a process of changing a CSS property's value gradually, based on the specified no. of seconds</p>
+  <p>It supports only pixels based color based properties like width, height, opacity, font-size, border-width, background-color, color, border-color etc.</p>
+  <pre>
+  selector
+  {
+    property: startvalue;
+    transition: property seconds;
+  }
+  selector:hover
+  {
+    property: endvalue;
+  }
+  </pre>
+  <p>Hover over the following div</p>
+  <div class="transitions"> Hello this is Shravya Chepa </div>
+</div>
+<div class="topic">
+  <h3>Transformations</h3>
+  <p>It is used to display the element in a different visual dimension.</p>
+  <p>Types of transformations</p>
+  <p>transform-origin:specifies the fixed point for rotate and scale transformations</p>
+  <pre>transform-origin: top left/top center/top right/ center left/ center center/ center right/bottom left/bottom center/bottom right;
+  Eg: transform-right:top center;
+  </pre>
+  <ol>
+    <li>Rotate (used to rotate an element based on the specified degrees)
+      <pre>
+      transform: rotate(deg);
+      Eg- transform: rotate(45deg);
+      </pre>
+    </li>
+    <li>Skew (wrists the element)
+      <pre>
+      transform: skew(deg);
+      </pre>
+    </li>
+    <li>Scale (shows the element in large size or small size visually)
+      <pre>
+      transform: scale(number);
+      </pre>
+    </li>
+    <li>Translate (changes the visual position of the element)
+      <pre>
+      transform: translate(x,y);
+      Eg- transform: translate(10px,10px);
+      </pre>
+    </li>
+    <li>Multiple Transformations (more than one transformation at a time)
+      <pre>
+      transform: rotate(deg) scale(num) translate(x,y) skew(deg);
+      Eg- transform: rotate(90deg) scale(3) translate(25px,25px) skew(15deg);
+      </pre>
+    </li>
+  </ol>
+  <div class="transform"> Almost done!</div>
+</div>
+<div class="topic">
+  <h3>Animations</h3>
+  <p>They are a group of transitions which are performed one after the other over a period of time.</p>
+  <p>A transition contains only two points(starting pt and ending pt) but an animation contains multiple points of milestones.</p>
+  <pre>
+  selector{
+   animation: animationname seconds(s);
+  }
+  @keyframes animationname{
+   0%{ property: value; property: value; }
+   25%{ property: value; property: value; }
+   50%{ property: value; property: value; }
+   75%{ property: value; property: value; }
+   100%{ property: value; property: value; }
+  }
+
+  Eg: .divname{
+  background-color:black;
+  font-size:40px;
+  width:200px; height:200px;
+  }
+  .divname:hover{
+  cursor:pointer;
+  animation: myanimation 10s;
+  }
+  @keyframes myanimation{
+   0%{ transform: translate(0px,0px); }
+   25%{ transform: translate(50px,0px); }
+   50%{ transform: translate(50px,100px); }
+   75%{ transform: translate(0px,100px); }
+   100%{ transform: translate(0px,0px); }
+  }
+  </pre>
+  <p>Click below</p>
+  <div class="anim"> Wow? </div>
+</div>
+<div class="topic">
+  <h3>Static Page Template</h3>
+  <ol>
+    <li>Header: contains logo, website name, login, search etc</li>
+    <li>Nav: for menubar</li>
+    <li>Container: left column and page content</li>
+    <li>Leftcol: left side menu</li>
+    <li>PageContent: actual content</li>
+    <li>Footer: bottom info and links for other related sites</li>
+  </ol>
+  <div class="box1"> <div class="box2">Header</div> <div class="box3"> Nav </div> <div class="box4">Container<div class="box5">LeftCol</div> <div class="box6">Pagecontent</div></div> <div class="box7">Footer</div></div>
+</div>
+<hr>
+  <div class="bottom-container">
+    <h4 class="resources">Resources</h4>
+    <p class="resources">w3schools</p><p class="resources">MDN Docs</p><p class="resources">Notes by Mr.Harsh Vardhan(UI Expert)</p>
+    <p>© 2020 Shravya Chepa.</p>
+    <p>Reach me at riya.chepa@gmail.com</p>
+  </div>
+</body>
+  </html>
